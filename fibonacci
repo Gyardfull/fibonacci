@@ -1,0 +1,20 @@
+lista = list()
+antecessorUm = 0
+antecessorDois = 0
+n1 = 0
+n2 = 1
+lista.insert(0, n1)
+lista.insert(1, n2)
+limite = int(input('Insira um limite para a sequência: '))
+while True :
+    novoNum = n1 + n2
+    lista.append(novoNum)
+    antecessorUm = n2 
+    antecessorDois = novoNum
+    novoNum = antecessorUm + antecessorDois
+    n1 = antecessorUm
+    n2 = antecessorDois
+    
+    if novoNum > limite:
+        break
+print(lista)
